@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { RiCoinsLine, RiBankLine, RiBriefcase2Line } from "react-icons/ri";
+
 export const Navbar = () => {
   return (
     <div className="navbar bg-base-100 border-b shadow-sm">
@@ -25,22 +27,25 @@ export const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <Link href="sunduk">Sunduk</Link>
+              <Link href="sunduk"><RiCoinsLine />Sunduk</Link>
             </li>
             <li>
-            <Link href="sunduk">Sunduk</Link>
+            <Link href="loans">Loans</Link>
             </li>
           </ul>
         </div>
         <Link className="btn btn-ghost text-xl" href="/">Sunduk</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-          <Link href="sunduk">Sunduk</Link>
+        <ul className="menu menu-horizontal px-1 flex gap-2">
+        <li>
+          <Link href="account"><RiBriefcase2Line /> Account</Link>
           </li>
           <li>
-          <Link href="sunduk">Sunduk</Link>
+          <Link href="loans"><RiCoinsLine /> Loans</Link>
+          </li>
+          <li>
+          <Link href="sunduk"><RiBankLine /> Sunduk</Link>
           </li>
         </ul>
       </div>
@@ -53,13 +58,12 @@ export const Navbar = () => {
       </div>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li>
-          <a className="justify-between">
+          <Link href="profile" className="justify-between">
             Profile
-            <span className="badge">New</span>
-          </a>
+          </Link>
         </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
+        <li><Link href="settings">Settings</Link></li>
+        <li><Link href="auth/login">Logout</Link></li>
       </ul>
     </div>
       </div>
