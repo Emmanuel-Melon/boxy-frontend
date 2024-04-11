@@ -27,10 +27,10 @@ export const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <Link href="sunduk"><RiCoinsLine />Sunduk</Link>
+              <Link href="/sunduk"><RiCoinsLine />Sunduk</Link>
             </li>
             <li>
-            <Link href="loans">Loans</Link>
+            <Link href="/loans">Loans</Link>
             </li>
           </ul>
         </div>
@@ -39,13 +39,13 @@ export const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 flex gap-2">
         <li>
-          <Link href="account"><RiBriefcase2Line /> Account</Link>
+          <Link href="/account"><RiBriefcase2Line /> Account</Link>
           </li>
           <li>
-          <Link href="loans"><RiCoinsLine /> Loans</Link>
+          <Link href="/loans"><RiCoinsLine /> Loans</Link>
           </li>
           <li>
-          <Link href="sunduk"><RiBankLine /> Sunduk</Link>
+          <Link href="/sunduk"><RiBankLine /> Sunduk</Link>
           </li>
         </ul>
       </div>

@@ -1,18 +1,18 @@
 import { ListSunduks } from "@/Sunduk/ListMembers";
 import { RiAddLine } from "react-icons/ri";
-
+import Link from "next/link";
+import { PageToolbar } from "@/components/PageToolBar";
 
 export default function Home() {
   return (
     <section className="space-y-4">
-      <div className="border-b flex items-center justify-between p-4">
+      <PageToolbar title="Sunduks">
         <div>
-          <h3>Hello</h3>
+          <Link href="/sunduk/new" className="btn btn-primary">
+            Start Sunduk <RiAddLine />
+          </Link>
         </div>
-        <div>
-          <button className="btn btn-primary">Start Sunduk <RiAddLine /></button>
-        </div>
-      </div>
+      </PageToolbar>
       <ListSunduks />
     </section>
   );
