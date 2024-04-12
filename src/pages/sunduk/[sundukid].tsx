@@ -1,16 +1,41 @@
 import { SundukSummary } from "@/Sunduk/SundukSummary";
-import { SundukStats } from "@/Sunduk/SundukStats";
+import { SundukDetails } from "@/Sunduk/SundukDetails";
+import { PageToolbar } from "@/components/PageToolBar";
+import { JoinSundukButton } from "@/Sunduk/JoinSundukButton";
+import { LoanRequests } from "@/Loans/LoanRequests";
+import { PreviousSundukCycle } from "@/Sunduk/PreviousSundukCycle";
+import { NextSundukCycle } from "@/Sunduk/NextSundukCycle";
+import { Tabs } from "@/components/Tabs";
+import { SundukCycles } from "@/Sunduk/ListSundukCycles";
 
 export default function SundukPage() {
   return (
-    <section className="space-y-2 p-8">
-      <h1>Sunduk</h1>
-      <SundukStats />
-      <div className="flex gap-2">
-        <div>
-          <SundukSummary />
+    <>
+      <PageToolbar title="Sunduk Title">
+        <div className="flex gap-2">
+          <JoinSundukButton />
         </div>
-      </div>
-    </section>
+      </PageToolbar>
+      <section className="space-y-2 p-4">
+        <div className="flex gap-2">
+          <div className="w-96">
+            <SundukSummary />
+          </div>
+          <div className="grow space-y-4">
+            <SundukDetails />
+            <div className="flex gap-2">
+              <div className="grow">
+                <PreviousSundukCycle />
+              </div>
+              <div className="grow">
+                <NextSundukCycle />
+              </div>
+            </div>
+            <LoanRequests />
+            <SundukCycles />
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

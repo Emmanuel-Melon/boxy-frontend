@@ -1,4 +1,4 @@
-import { ListSunduks } from "@/Sunduk/ListMembers";
+import { ListSunduks } from "@/Sunduk/ListSunduks";
 import { RiAddLine } from "react-icons/ri";
 import Link from "next/link";
 import { PageToolbar } from "@/components/PageToolBar";
