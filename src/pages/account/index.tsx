@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { RiAddLine } from "react-icons/ri";
 import { PageToolbar } from "@/components/PageToolBar";
+import { AccountOverview } from "@/Account/AccountOverview";
+import { ListTransactions } from "@/Account/ListTransactions";
 
 export default function Account() {
   return (
-    <section>
+    <>
       <PageToolbar title="Account">
         <div className="flex gap-2">
           <Link href="/account/withdraw" className="btn btn-sm btn-outline">
@@ -15,12 +17,14 @@ export default function Account() {
           </Link>
         </div>
       </PageToolbar>
-      <div>
-        <h3>Account Information</h3>
-      </div>
-      <div>
-        <h3>Transactions</h3>
-      </div>
-    </section>
+      <section className="p-4 flex gap-4">
+        <div>
+          <AccountOverview />
+        </div>
+        <div className="grow">
+          <ListTransactions />
+        </div>
+      </section>
+    </>
   );
 }

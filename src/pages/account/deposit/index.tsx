@@ -1,8 +1,9 @@
+import { DepositForm } from "@/Account/DepositForm";
+
 export default function Deposit() {
-    return (
-      <section>
-        <h1>Deposit</h1>
-      </section>
-    );
-  }
-  
+  return (
+    <section className="p-8">
+      <DepositForm />
+    </section>
+  );
+}

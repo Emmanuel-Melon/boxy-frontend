@@ -7,7 +7,7 @@ export default function Loans() {
     <section>
       <PageToolbar title="Loans">
         <div>
-          <Link href="/loans/apply" className="btn btn-primary">
+          <Link href="/loans/apply" className="btn btn-sm btn-primary">
             Apply <RiAddLine />
           </Link>
         </div>

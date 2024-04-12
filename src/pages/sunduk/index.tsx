@@ -8,7 +8,7 @@ export default function Home() {
     <section className="space-y-4">
       <PageToolbar title="Sunduks">
         <div>
-          <Link href="/sunduk/new" className="btn btn-primary">
+          <Link href="/sunduk/new" className="btn btn-sm btn-primary">
             Start Sunduk <RiAddLine />
           </Link>
         </div>

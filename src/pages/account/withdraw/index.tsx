@@ -1,7 +1,9 @@
+import { WithdrawForm } from "@/Account/WithdrawForm";
+
 export default function Withdraw() {
     return (
-      <section>
-        <h1>Withdraw</h1>
+      <section className="p-8">
+        <WithdrawForm />
       </section>
     );
   }
